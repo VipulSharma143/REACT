@@ -61,6 +61,7 @@ const storepro=multer.diskStorage({
 const  uploadpro=multer({
     storage:storepro, 
 });
+//mohit
 app.post("/product",uploadpro.single("image"),CreateProduct);
 app.put("/product",uploadpro.single("image"),UpdateProduct);
 app.delete("/product",DeleteProduct);
