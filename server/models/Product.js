@@ -19,7 +19,7 @@ const ProductSchema=new mongoose.Schema({
     },
     active:{
         type:Boolean,
-        required:true
+        default:true
     },
     department:{
         type:mongoose.Schema.Types.ObjectId,
@@ -31,7 +31,7 @@ const ProductSchema=new mongoose.Schema({
         required:true,
     },
 },
-{timeseries:true}
+{timestamps:true}
 );
 const ProductModel=mongoose.model("product",ProductSchema)
 export default ProductModel;

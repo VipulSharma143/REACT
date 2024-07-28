@@ -14,7 +14,7 @@ export const CreateUniversity=async(req,res)=>{
 };
 export const UpdateUniversity=async(req,res)=>{
     try {
-      const uniData=await UniversityModel.findByIdAndUpdate({id:req.body.id},{
+      const uniData=await UniversityModel.findByIdAndUpdate({_id:req.body.id},{
         name:req.body.name,
         image:req?.file?.filename,
     });
